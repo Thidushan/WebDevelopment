@@ -1,31 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebDevelopmnt</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>React Docs Clone</title>
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
+
+<!-- Announcement -->
+<div class="announcement-bar">
+  Join us for React Conf on Oct 7–8. <a href="#">Learn more.</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="logo-version" aria-label="React logo and version">
+    <!-- React logo SVG -->
+    <svg viewBox="0 0 128 128" aria-hidden="true" focusable="false">
+      <circle cx="64" cy="64" r="11" />
+      <g stroke="#61dafb" stroke-width="8" fill="none">
+        <ellipse rx="55" ry="15" cx="64" cy="64" transform="rotate(60 64 64)"/>
+        <ellipse rx="55" ry="15" cx="64" cy="64" transform="rotate(120 64 64)"/>
+        <ellipse rx="55" ry="15" cx="64" cy="64"/>
+      </g>
+    </svg>
+    <span class="version">v19.1</span>
+  </div>
+
+  <div class="search-container">
+    <input class="search-input" type="search" placeholder="Search" aria-label="Search documentation" />
+    <div class="keyboard-shortcut"><span class="ctrl">Ctrl</span><span>K</span></div>
+  </div>
+
+  <nav class="top-nav" aria-label="Primary navigation">
+    <a href="#" class="active" aria-current="page">Learn</a>
+    <a href="#">Reference</a>
+    <a href="#">Community</a>
+    <a href="#">Blog</a>
+    <!-- Dark mode icon -->
+    <svg viewBox="0 0 24 24" aria-hidden="true" role="img" title="Toggle Dark Mode" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M16.95 16.95l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M16.95 7.05l1.42-1.42"/></svg>
+    <!-- Language icon -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a10 10 0 0 0-7.9 16.1"/></svg>
+    <!-- GitHub icon -->
+    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.35c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.88-1.17-.88-1.17-.72-.5.05-.49.05-.49.8.06 1.22.82 1.22.82.71 1.22 1.87.87 2.33.67.07-.52.28-.87.5-1.07-1.77-.2-3.63-.89-3.63-3.96 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.67 7.67 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.08-1.87 3.76-3.64 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8a8 8 0 0 0-8-8z"/></svg>
+  </nav>
+</header>
+
+<!-- Main container with sidebar, content, right sidebar -->
+<div class="container">
+
+  <!-- Left sidebar -->
+  <aside class="sidebar" aria-label="Main navigation">
+
+    <div class="sidebar-section">
+      <h3>Get Started</h3>
+      <ul>
+        <li class="active" tabindex="0">
+          Quick Start <span class="arrow">▼</span>
+        </li>
+        <li><small>Tutorial: Tic-Tac-Toe</small></li>
+        <li><small>Thinking in React</small></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <ul>
+        <li><strong>Installation</strong> <span class="arrow">▶</span></li>
+        <li><strong>Setup</strong> <span class="arrow">▶</span></li>
+        <li><strong>React Compiler</strong> <span class="arrow">▶</span></li>
+      </ul>
+      <hr/>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Learn React</h3>
+      <ul>
+        <li><strong>Describing the UI</strong> <span class="arrow">▶</span></li>
+        <li><strong>Adding Interactivity</strong> <span class="arrow">▶</span></li>
+        <li><strong>Managing State</strong> <span class="arrow">▶</span></li>
+      </ul>
+    </div>
+
+  </aside>
+
+  <!-- Main content -->
+  <main role="main">
+    <div class="breadcrumb" aria-label="Breadcrumb">Learn React &gt;</div>
     <h1>Quick Start</h1>
-    <p>Welcome to the React documentation! This page will give you an introduction to 80% of the React concepts that you will use on a daily basis.</p>
-    <h3>You will learn</h3>
-    <ul>
+    <p class="lead">
+      Welcome to the React documentation! This page will give you an introduction to 80% of the React concepts that you will use on a daily basis.
+    </p>
+
+    <section class="learn-list" aria-label="You will learn">
+      <h2>You will learn</h2>
+      <ul>
         <li>How to create and nest components</li>
         <li>How to add markup and styles</li>
         <li>How to display data</li>
         <li>How to render conditions and lists</li>
         <li>How to respond to events and update the screen</li>
         <li>How to share data between components</li>
+      </ul>
+    </section>
+
+    <h2 class="section-title">Creating and nesting components</h2>
+  </main>
+
+  <!-- Right sidebar -->
+  <aside class="right-sidebar" aria-label="On this page">
+    <h3>On this page</h3>
+    <ul>
+      <li class="active" tabindex="0">Overview</li>
+      <li>Creating and nesting components</li>
+      <li>Writing markup with JSX</li>
+      <li>Adding styles</li>
+      <li>Displaying data</li>
+      <li>Conditional rendering</li>
+      <li>Rendering lists</li>
+      <li>Responding to events</li>
+      <li>Updating the screen</li>
+      <li>Using Hooks</li>
+      <li>Sharing data between components</li>
+      <li>Next Steps</li>
     </ul>
-    <h2>Creating and nesting components</h2>
-    <p>React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.</p>
-    <p>React components are JavaScript functions that return markup</p>
-    <div>
-        function MyButton() { <br>
-  return (
-    &lt;button&gt; I'm a button&lt;button&gt;
-  );
-}
-    </div>
+  </aside>
+</div>
+
+<!-- Bottom feedback -->
+<div class="feedback" role="region" aria-label="Page feedback">
+  Is this page useful?
+  <svg role="img" aria-label="Thumbs up" viewBox="0 0 24 24">
+    <path d="M2 21h4V9H2v12zM23 10a2 2 0 00-2-2h-6.31l.95-4.57.03-.32a.999.999 0 00-1.34-1l-7 7v2h6a2 2 0 012 2v7h3a2 2 0 002-2v-7z"/>
+  </svg>
+  <svg role="img" aria-label="Thumbs down" viewBox="0 0 24 24">
+    <path d="M2 3h4v12H2V3zm21 11a2 2 0 00-2 2v7h-6a2 2 0 01-2-2v-6H4a2 2 0 01-2-2V3h3l7 7v2h6a2 2 0 012 2z"/>
+  </svg>
+</div>
+
+<script>
+  // Example JS interactivity:
+  // Toggle expand/collapse arrows in left sidebar
+  document.querySelectorAll('.sidebar-section li strong').forEach(item => {
+    item.addEventListener('click', () => {
+      const arrow = item.nextElementSibling;
+      if (arrow.textContent === '▶') {
+        arrow.textContent = '▼';
+      } else if (arrow.textContent === '▼') {
+        arrow.textContent = '▶';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
